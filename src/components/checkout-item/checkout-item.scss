@@ -34,8 +34,15 @@
 		}
 	}
 
-	.remove-button {
-		padding-left: 12px;
+	.remove-button,
+	.arrow {
+		padding: 0;
 		cursor: pointer;
+		background: none;
+		display: inline-block;
+		font-size: inherit;
+		text-align: center;
+		border: none;
+		outline: none;
 	}
 }
