@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item";
 
-import { selectCollection } from "../../redux/shop/shop.selectors";
+import { selectCollection } from "../../redux/shop/shop.selector";
 
-import './category.scss'
+import './collection.scss'
 
 const CollectionPage = () => (
     <div className="Collection">
@@ -13,7 +13,7 @@ const CollectionPage = () => (
     </div>
 );
 
-mapstateToProps = (state, ownProps) => ({
+const mapstateToProps = (state, ownProps) => ({
     collection: selectCollection(ownProps.match.params.collectionId)(state)
 });
 
