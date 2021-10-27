@@ -13,7 +13,6 @@ const buttonStyles = css`
 `;
 
 const invertedButtonStyles = css`
-    &.inverted {
         background-color: white;
         color: black;
         border: 1px solid black;
@@ -23,14 +22,12 @@ const invertedButtonStyles = css`
             color: white;
             border: none;
         }
-    }
 `;
 
 const googleSignInStyles = css`
-    &.google-sign-in {
         background-color: #4285f4;
         color: white;
-    }
+
         &:hover {
             background-color: white;
             color: #4285f4;
