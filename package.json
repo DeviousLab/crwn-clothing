@@ -20,6 +20,7 @@
 		"url": "git+https://github.com/DeviousLab/crwn-clothing.git"
 	},
 	"dependencies": {
+		"axios": "^0.24.0",
 		"body-parser": "^1.18.3",
 		"dotenv": "7.0.0",
 		"express": "^4.16.4",
