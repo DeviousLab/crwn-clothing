@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -9,6 +8,8 @@ import ShopPage from './pages/shop/shop';
 import Header from './components/header/header';
 import SignInAndRegister from './pages/sign-in-and-register/sign-in-and-register';
 import CheckoutPage from './pages/checkout/checkout';
+
+import { GlobalStyle } from './global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -28,6 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
         <Route exact path='/' component={HomePage} />
