@@ -6,7 +6,11 @@ import CustomButton from '../custom-button/custom-button';
 
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
 
-import './sign-in.scss';
+import {
+    SignInContainer,
+    SignInTitle,
+    ButtonsBarContainer
+} from './sign-in.styles';
 
 class SignIn extends React.Component {
     constructor(props) {
@@ -35,19 +39,19 @@ class SignIn extends React.Component {
     render() {
         const { googleSignInStart } = this.props;
         return (
-            <div className="sign-in">
-                <h2>I have an account</h2>
+            <SignInContainer>
+                <SignInTitle>I have an account</SignInTitle>
                 <span>Sign in with your details</span>
 
                 <form onSubmit={this.handleSubmit}>
                     <FormInput type="email" name="email" value={this.state.email} handleChange={this.handleChange} label="Email" required />
                     <FormInput type="password" name="password" value={this.state.password} handleChange={this.handleChange} label="Password" required />
-                    <div className="buttons">
+                    <ButtonsBarContainer>
                         <CustomButton type="submit">SIGN IN</CustomButton>
                         <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn>SIGN IN WITH GOOGLE</CustomButton>
-                    </div>
+                    </ButtonsBarContainer>
                 </form>
-            </div>
+            </SignInContainer>
         )
     }
 }
