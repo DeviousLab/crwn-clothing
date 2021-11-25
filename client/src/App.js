@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header';
+import Spinner from './components/spinner/spinner';
 
 import { GlobalStyle } from './global.styles';
 
@@ -33,7 +34,7 @@ class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Suspense fallback={<div>...Loading</div>}>
+          <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={HomePage} />
             <Route path='/shop' component={ShopPage} /> 
             <Route exact path='/checkout' component={CheckoutPage} /> 
