@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header';
 import Spinner from './components/spinner/spinner';
+import ErrorBoundary from './components/error-boundary/error-boundary';
 
 import { GlobalStyle } from './global.styles';
 
@@ -34,12 +35,14 @@ class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Switch>
-          <Suspense fallback={<Spinner />}>
-            <Route exact path='/' component={HomePage} />
-            <Route path='/shop' component={ShopPage} /> 
-            <Route exact path='/checkout' component={CheckoutPage} /> 
-            <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndRegister />)} /> 
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<Spinner />}>
+              <Route exact path='/' component={HomePage} />
+              <Route path='/shop' component={ShopPage} /> 
+              <Route exact path='/checkout' component={CheckoutPage} /> 
+              <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndRegister />)} /> 
+            </Suspense>
+          </ErrorBoundary>
         </Switch>
       </div>
     );
