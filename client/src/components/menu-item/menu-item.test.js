@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { MenuItem } from './menu-item.component';
+import { MenuItem } from './menu-item';
 
 describe('MenuItem component', () => {
   let wrapper;

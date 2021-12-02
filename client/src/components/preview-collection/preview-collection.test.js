@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { CollectionPreview } from './preview-collection.component';
+import { CollectionPreview } from './preview-collection';
 
 describe('CollectionPreview component', () => {
   let wrapper;

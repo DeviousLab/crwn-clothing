@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CartIcon } from './cart-icon.component';
+import { CartIcon } from './cart-icon';
 
 describe('CartIcon component', () => {
   let wrapper;

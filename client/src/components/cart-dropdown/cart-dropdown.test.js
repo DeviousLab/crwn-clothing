@@ -1,8 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { CartDropdown } from './cart-dropdown.component';
-import CartItem from '../cart-item/cart-item.component';
+
+import { CartDropdown } from './cart-dropdown';
+import CartItem from '../cart-item/cart-item';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
